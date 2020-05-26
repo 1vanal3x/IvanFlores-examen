@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Encuesta">
+
+    <TextView
+        android:id="@+id/tvPregunta1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="16dp"
+        android:text="¿Por que eligio este centro?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDato1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tvPregunta1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPregunta1" />
+
+    <TextView
+        android:id="@+id/tvPregunta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="¿Que deportes practica?"
+        app:layout_constraintStart_toStartOf="@+id/etDato1"
+        app:layout_constraintTop_toBottomOf="@+id/etDato1" />
+
+    <CheckBox
+        android:id="@+id/cbOpcion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Futbol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPregunta2" />
+
+    <CheckBox
+        android:id="@+id/cbOpcion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:text="Basquet"
+        app:layout_constraintEnd_toStartOf="@+id/cbOpcion3"
+        app:layout_constraintTop_toBottomOf="@+id/tvPregunta2" />
+
+    <CheckBox
+        android:id="@+id/cbOpcion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="17dp"
+        android:text="Voleibol"
+        app:layout_constraintBottom_toTopOf="@+id/tvPrengunta3"
+        app:layout_constraintEnd_toEndOf="@+id/tvPrengunta3" />
+
+    <TextView
+        android:id="@+id/tvPrengunta3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="17dp"
+        android:text="Esta interesado en aprender otro idiama aparte de ingles."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbOpcion1" />
+
+    <RadioButton
+        android:id="@+id/rbOpcion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:text="Si"
+        app:layout_constraintStart_toStartOf="@+id/tvPrengunta3"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrengunta3" />
+
+    <RadioButton
+        android:id="@+id/rbOpcion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="14dp"
+        android:text="No"
+        app:layout_constraintStart_toStartOf="@+id/rbOpcion1"
+        app:layout_constraintTop_toBottomOf="@+id/rbOpcion1" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:onClick="envioDatos"
+        android:text="Enviar"
+        app:layout_constraintStart_toEndOf="@+id/rbOpcion2"
+        app:layout_constraintTop_toBottomOf="@+id/rbOpcion2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
